@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Lumin Lace</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.contact-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 0; min-height: 600px; }
+.contact-sidebar { background: var(--dark); padding: 72px 56px; display: flex; flex-direction: column; justify-content: space-between; }
+.contact-sidebar h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 40px; font-weight: 800; text-transform: uppercase; line-height: 0.95; margin-bottom: 18px; }
+.contact-sidebar p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.8; font-weight: 300; margin-bottom: 40px; }
+.contact-meta { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+.meta-item { display: flex; align-items: flex-start; gap: 12px; }
+.meta-item svg { stroke: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.meta-item div strong { display: block; font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+.meta-item div span { font-size: 12px; color: rgba(255,255,255,0.45); }
+.response-note { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); padding: 16px 18px; }
+.response-note p { font-size: 12px; color: rgba(255,255,255,0.5); margin: 0; line-height: 1.6; }
+.response-note strong { color: var(--gold); }
+
+.contact-form-wrap { background: var(--black); padding: 72px 56px; }
+.contact-form-wrap h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; text-transform: uppercase; margin-bottom: 32px; color: rgba(255,255,255,0.5); }
+
+.audience-tabs { display: flex; gap: 2px; margin-bottom: 32px; }
+.tab-btn { flex: 1; padding: 12px; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: var(--dark); color: rgba(255,255,255,0.4); border: none; cursor: pointer; font-family: 'Barlow', sans-serif; transition: all 0.2s; }
+.tab-btn.active { background: var(--pink); color: #fff; }
+
+.faq { background: var(--dark); padding: 64px 48px; }
+.faq h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; margin-bottom: 36px; }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.faq-item { background: var(--black); padding: 24px 28px; }
+.faq-item h4 { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.faq-item p { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="announce">Hong Kong based &nbsp;·&nbsp; Supplying retailers across 12 markets &nbsp;·&nbsp; Trade enquiries welcome</div>
+
+<nav>
+  <a href="index.html"><img src="assets/logo.png" alt="Lumin Lace" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="products.html">Products</a></li>
+    <li><a href="sourcing.html">Sourcing</a></li>
+    <li><a href="suppliers.html">For Suppliers</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn-nav">Request Catalogue</a>
+</nav>
+
+<div class="page-hero">
+  <span class="eyebrow">Get in Touch</span>
+  <h1>Trade enquiries &amp;<br>sourcing discussions</h1>
+  <p>Whether you're a retailer, distributor, buying agent or factory — reach out and we'll respond within 2 business days.</p>
+</div>
+
+<!-- CONTACT MAIN -->
+<div class="contact-wrap">
+  <div class="contact-sidebar">
+    <div>
+      <h2>Let's talk business.</h2>
+      <p>We work with retailers looking to carry Lumin Lace, distributors seeking exclusive rights in their market, and factories that want to join our supply network.</p>
+      <div class="contact-meta">
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="16" height="16"><path d="M3 9l9-6 9 6v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          <div><strong>Headquarters</strong><span>Hong Kong SAR</span></div>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div><strong>Trade Enquiries</strong><span>trade@luminlace.com</span></div>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div><strong>Response Time</strong><span>Within 2 business days</span></div>
+        </div>
+      </div>
+      <div class="response-note">
+        <p>Factories submitting a supplier profile should use the dedicated form on the <a href="suppliers.html" style="color:var(--gold);text-decoration:none;">For Suppliers page</a>. <strong>Include certifications and capacity details</strong> to speed up our review.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form-wrap">
+    <div class="audience-tabs">
+      <button class="tab-btn active">Retailer / Buyer</button>
+      <button class="tab-btn">Distributor</button>
+      <button class="tab-btn">Press / Media</button>
+      <button class="tab-btn">Other</button>
+    </div>
+    <form class="contact-form" onsubmit="return false;">
+      <div class="form-row">
+        <div class="form-group"><label>Name</label><input type="text" placeholder="Your full name"></div>
+        <div class="form-group"><label>Company</label><input type="text" placeholder="Company / Business name"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+        <div class="form-group"><label>Country / Market</label><input type="text" placeholder="Where are you based?"></div>
+      </div>
+      <div class="form-group">
+        <label>What are you looking for?</label>
+        <select>
+          <option value="">Select an option</option>
+          <option>Stock Lumin Lace in my store / chain</option>
+          <option>Exclusive distribution rights in my market</option>
+          <option>Wholesale pricing &amp; catalogue</option>
+          <option>Sample request</option>
+          <option>OEM / private label enquiry</option>
+          <option>Press or media request</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Estimated Annual Volume (units)</label><input type="text" placeholder="e.g. 500–1,000 units/year"></div>
+      <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Tell us about your business and what you're looking for. The more detail, the faster we can respond."></textarea></div>
+      <button type="submit" class="btn-submit">Send Enquiry</button>
+    </form>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+  <span class="eyebrow">Common Questions</span>
+  <h2>Before you reach out</h2>
+  <div class="faq-grid">
+    <div class="faq-item"><h4>What is the minimum order quantity?</h4><p>MOQs vary by product. Straighteners and dryers typically start at 30–50 units per SKU. Complete sets with accessories may have higher MOQs due to multi-factory coordination.</p></div>
+    <div class="faq-item"><h4>Do you offer exclusive distribution?</h4><p>Yes, in markets where we don't already have a distribution partner. Exclusivity is considered for partners committing to meaningful annual volumes. Discuss in your enquiry.</p></div>
+    <div class="faq-item"><h4>Can I request samples before committing?</h4><p>Yes. Sample requests are welcome from verified retailers and distributors. We'll discuss sample terms and lead times in your first conversation.</p></div>
+    <div class="faq-item"><h4>Do you offer OEM or private label?</h4><p>We can discuss OEM arrangements for buyers with sufficient volumes. Private label production is available through our factory network for qualifying orders.</p></div>
+    <div class="faq-item"><h4>What markets do you currently supply?</h4><p>We currently supply retail partners across the UK, Europe, Middle East, Southeast Asia and Hong Kong. We are actively seeking distribution partners in new markets.</p></div>
+    <div class="faq-item"><h4>Are products CE certified?</h4><p>Yes. All Lumin Lace electrical products carry CE and RoHS certification. UK plug standard versions are also available. Full compliance documentation provided on request.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><img src="assets/logo.png" alt="Lumin Lace" class="footer-logo-img"><div class="footer-tagline">Professional hair tools. Hong Kong sourced. Retail ready.</div></div>
+    <div class="footer-col"><h4>Products</h4><ul><li><a href="products.html">Straighteners</a></li><li><a href="products.html">Hair Dryers</a></li><li><a href="products.html">Curl Wands</a></li></ul></div>
+    <div class="footer-col"><h4>Trade</h4><ul><li><a href="contact.html">Become a Stockist</a></li><li><a href="contact.html">Distributor Enquiry</a></li><li><a href="suppliers.html">Factory Submissions</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">About</a></li><li><a href="sourcing.html">Sourcing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Lumin Lace. All rights reserved. Registered in Hong Kong.</span><span>Privacy Policy · Terms of Trade</span></div>
+</footer>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>

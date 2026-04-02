@@ -1,24 +1,13 @@
 {
   "version": 2,
   "name": "luminlace",
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/**",
-      "use": "@vercel/static"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+    { "src": "/products", "dest": "/products.html" },
+    { "src": "/sourcing", "dest": "/sourcing.html" },
+    { "src": "/suppliers", "dest": "/suppliers.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }

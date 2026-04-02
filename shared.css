@@ -1,0 +1,73 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #0e0e0e;
+  --dark: #1a1a1a;
+  --dark2: #222;
+  --pink: #E8547A;
+  --gold: #C9A84C;
+  --white: #ffffff;
+  --grey: #888;
+}
+
+body { font-family: 'Barlow', sans-serif; background: var(--black); color: var(--white); font-size: 15px; line-height: 1.5; overflow-x: hidden; }
+
+/* ANNOUNCE */
+.announce { background: var(--dark); border-bottom: 1px solid #222; text-align: center; padding: 11px 20px; font-size: 12px; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); }
+
+/* NAV */
+nav { background: var(--black); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 72px; border-bottom: 1px solid #1e1e1e; position: sticky; top: 0; z-index: 100; }
+.logo-img { height: 50px; width: auto; display: block; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--white); }
+.btn-nav { background: var(--pink); color: #fff; padding: 10px 22px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s; white-space: nowrap; }
+.btn-nav:hover { opacity: 0.85; }
+
+/* BUTTONS */
+.btn-white { display: inline-block; background: var(--white); color: var(--black); padding: 14px 32px; font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; border: none; text-decoration: none; }
+.btn-white:hover { opacity: 0.88; }
+.btn-outline { display: inline-block; background: transparent; color: var(--white); padding: 13px 32px; font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; border: 2px solid rgba(255,255,255,0.4); text-decoration: none; }
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
+.btn-pink { display: inline-block; background: var(--pink); color: #fff; padding: 14px 32px; font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; border: none; text-decoration: none; }
+.btn-pink:hover { opacity: 0.85; }
+
+/* TYPOGRAPHY HELPERS */
+.eyebrow { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 500; display: block; }
+.display { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; text-transform: uppercase; line-height: 0.95; color: var(--white); }
+
+/* PAGE HERO (inner pages) */
+.page-hero { background: var(--dark); border-bottom: 1px solid #222; padding: 64px 48px 56px; }
+.page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(40px, 6vw, 64px); font-weight: 800; text-transform: uppercase; line-height: 0.95; margin-bottom: 16px; }
+.page-hero p { font-size: 14px; color: rgba(255,255,255,0.6); max-width: 520px; line-height: 1.8; font-weight: 300; margin-bottom: 28px; }
+
+/* FOOTER */
+footer { background: #111; border-top: 1px solid #1a1a1a; padding: 56px 48px 32px; }
+.footer-logo-img { height: 44px; width: auto; display: block; margin-bottom: 14px; filter: brightness(0) invert(1); opacity: 0.6; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-tagline { font-size: 12px; color: var(--grey); line-height: 1.7; max-width: 220px; font-weight: 300; }
+.footer-col h4 { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.3); margin-bottom: 16px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col li a { font-size: 13px; color: var(--grey); text-decoration: none; }
+.footer-col li a:hover { color: var(--white); }
+.footer-bottom { border-top: 1px solid #1a1a1a; padding-top: 24px; display: flex; justify-content: space-between; font-size: 11px; color: #444; }
+
+/* TRUST BAR */
+.trust { background: var(--dark); padding: 36px 48px; }
+.trust-label { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; text-align: center; margin-bottom: 24px; color: rgba(255,255,255,0.4); }
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #2a2a2a; border-left: 1px solid #2a2a2a; }
+.trust-item { display: flex; align-items: flex-start; gap: 14px; padding: 22px 24px; border-right: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; }
+.trust-item svg { stroke: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.trust-item strong { display: block; font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.trust-item span { font-size: 11px; color: var(--grey); line-height: 1.5; }
+
+/* CONTACT FORM (shared) */
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); font-weight: 500; }
+.form-group input, .form-group select, .form-group textarea { background: #111; border: 1px solid #2a2a2a; color: var(--white); padding: 12px 14px; font-size: 13px; font-family: 'Barlow', sans-serif; font-weight: 300; outline: none; resize: vertical; width: 100%; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--pink); }
+.form-group select option { background: #111; }
+.btn-submit { background: var(--pink); color: #fff; border: none; padding: 14px 36px; font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; align-self: flex-start; transition: opacity 0.2s; }
+.btn-submit:hover { opacity: 0.85; }

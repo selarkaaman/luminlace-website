@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sourcing Capability — Lumin Lace</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.sourcing-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
+.s-img { background: linear-gradient(135deg, #ff6b9e, #ff9dc8, #7dd4b8, #ff6b9e); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.s-text { background: var(--dark); padding: 72px 64px; display: flex; flex-direction: column; justify-content: center; }
+.s-text h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 800; text-transform: uppercase; line-height: 0.95; margin-bottom: 20px; }
+.s-text p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 16px; font-weight: 300; max-width: 420px; }
+
+.stats-bar { background: var(--black); padding: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+.stat-card { background: var(--dark); padding: 32px 28px; text-align: center; }
+.stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 800; color: var(--pink); display: block; line-height: 1; margin-bottom: 8px; }
+.stat-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+
+.process { padding: 72px 48px; background: var(--dark); }
+.process h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; text-transform: uppercase; margin-bottom: 48px; }
+.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+.step { background: var(--black); padding: 28px 24px; position: relative; }
+.step-num { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 800; color: rgba(232,84,122,0.15); line-height: 1; margin-bottom: 12px; }
+.step h3 { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em; }
+.step p { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+.step-connector { position: absolute; right: -1px; top: 50%; width: 2px; height: 24px; transform: translateY(-50%); background: var(--pink); opacity: 0.3; }
+
+.factory-model { background: var(--black); padding: 72px 48px; }
+.factory-model h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; text-transform: uppercase; margin-bottom: 12px; }
+.factory-model .sub { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 48px; font-weight: 300; max-width: 560px; line-height: 1.7; }
+.factory-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 48px; }
+.factory-card { background: var(--dark); padding: 28px 24px; }
+.factory-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(232,84,122,0.1); border: 1px solid rgba(232,84,122,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.factory-icon svg { stroke: var(--pink); }
+.factory-card h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.factory-card p { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+.certs { background: var(--dark); padding: 48px; display: flex; align-items: center; gap: 48px; flex-wrap: wrap; }
+.cert-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3); white-space: nowrap; }
+.cert-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+.cert-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 18px; border: 1px solid #333; color: rgba(255,255,255,0.6); }
+</style>
+</head>
+<body>
+
+<div class="announce">Hong Kong based &nbsp;·&nbsp; Supplying retailers across 12 markets &nbsp;·&nbsp; Trade enquiries welcome</div>
+
+<nav>
+  <a href="index.html"><img src="assets/logo.png" alt="Lumin Lace" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="products.html">Products</a></li>
+    <li><a href="sourcing.html" class="active">Sourcing</a></li>
+    <li><a href="suppliers.html">For Suppliers</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn-nav">Request Catalogue</a>
+</nav>
+
+<div class="page-hero">
+  <span class="eyebrow">Sourcing Capability</span>
+  <h1>One order.<br>Multiple factories.</h1>
+  <p>Our multi-factory model means retailers receive complete, coordinated product sets — tools, accessories and packaging — sourced from specialist manufacturers and consolidated in Hong Kong.</p>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-card"><span class="stat-num">8+</span><span class="stat-label">Factory Partners</span></div>
+  <div class="stat-card"><span class="stat-num">12</span><span class="stat-label">Markets Supplied</span></div>
+  <div class="stat-card"><span class="stat-num">15+</span><span class="stat-label">Years in HK Trade</span></div>
+  <div class="stat-card"><span class="stat-num">100%</span><span class="stat-label">QC at Origin</span></div>
+</div>
+
+<!-- SPLIT -->
+<div class="sourcing-split">
+  <div class="s-img">
+    <svg width="280" height="200" viewBox="0 0 280 200" fill="none"><rect x="20" y="68" width="80" height="16" rx="3" fill="#e87aaa" opacity="0.9"/><rect x="20" y="90" width="80" height="16" rx="3" fill="#7dd4b8" opacity="0.9"/><rect x="60" y="52" width="16" height="112" rx="8" fill="#e87aaa" opacity="0.85"/><rect x="110" y="36" width="16" height="132" rx="8" fill="#7dd4b8" opacity="0.85"/><rect x="155" y="68" width="80" height="16" rx="3" fill="#f4a8b8" opacity="0.9"/><rect x="155" y="90" width="80" height="16" rx="3" fill="#f4c8a8" opacity="0.9"/><rect x="192" y="52" width="16" height="112" rx="8" fill="#f4a8b8" opacity="0.8"/></svg>
+  </div>
+  <div class="s-text">
+    <span class="eyebrow">Why it matters</span>
+    <h2>No split shipments. No mismatched quality.</h2>
+    <p>Most importers deal with multiple factories independently — leading to mismatched finishes, split shipments and inconsistent packaging. We manage the entire supply chain as one coordinated project.</p>
+    <p>Every Lumin Lace complete set — tool, heat-resistant bag, and accessories — is sourced from specialist factories, quality-checked in Hong Kong, and consolidated before dispatch.</p>
+    <a href="contact.html" class="btn-outline" style="margin-top:12px;">Discuss Your Requirements</a>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section class="process">
+  <span class="eyebrow">How we work</span>
+  <h2>Our Sourcing Process</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Brief</h3>
+      <p>You share product spec, target retail price, volume and timeline. We map the factory landscape.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Factory Match</h3>
+      <p>We identify and qualify specialist manufacturers for each component of the order.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Sampling</h3>
+      <p>Pre-production samples sent for approval. We manage revision cycles and spec sign-off.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3>QC &amp; Consolidation</h3>
+      <p>In-house inspection at origin. All components consolidated in Hong Kong before shipment.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step">
+      <div class="step-num">05</div>
+      <h3>Delivery</h3>
+      <p>One shipment. Complete sets. Documentation and compliance handled end to end.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FACTORY MODEL -->
+<section class="factory-model">
+  <span class="eyebrow">Multi-factory model</span>
+  <h2>Specialist factories.<br>One brand standard.</h2>
+  <div class="sub">We don't work with generalist factories. Each component of a Lumin Lace product set is built by a manufacturer that specialises in exactly that product type.</div>
+  <div class="factory-grid">
+    <div class="factory-card">
+      <div class="factory-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="18" height="18"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <h3>Electrical Tools Factory</h3>
+      <p>Hair dryers, straighteners and curling wands. CE-certified, 500+ unit capacity, consistent electrical tolerances.</p>
+    </div>
+    <div class="factory-card">
+      <div class="factory-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="18" height="18"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div>
+      <h3>Accessories &amp; Bags Factory</h3>
+      <p>Heat-resistant travel bags, clips and accessories. Colour-matched per SKU. BSCI audited.</p>
+    </div>
+    <div class="factory-card">
+      <div class="factory-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <h3>Packaging Factory</h3>
+      <p>Retail-ready boxes, inserts and gifting packaging. Structural testing and print consistency guaranteed.</p>
+    </div>
+  </div>
+  <a href="contact.html" class="btn-pink">Start a Sourcing Conversation</a>
+</section>
+
+<!-- CERTS -->
+<div class="certs">
+  <span class="cert-label">Certifications &amp; Standards</span>
+  <div class="cert-tags">
+    <span class="cert-tag">CE</span>
+    <span class="cert-tag">RoHS</span>
+    <span class="cert-tag">BSCI</span>
+    <span class="cert-tag">ISO 9001</span>
+    <span class="cert-tag">REACH</span>
+    <span class="cert-tag">UK Plug Standard</span>
+    <span class="cert-tag">EU Plug Standard</span>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><img src="assets/logo.png" alt="Lumin Lace" class="footer-logo-img"><div class="footer-tagline">Professional hair tools. Hong Kong sourced. Retail ready.</div></div>
+    <div class="footer-col"><h4>Products</h4><ul><li><a href="products.html">Straighteners</a></li><li><a href="products.html">Hair Dryers</a></li><li><a href="products.html">Curl Wands</a></li><li><a href="products.html">Hot Brushes</a></li></ul></div>
+    <div class="footer-col"><h4>Trade</h4><ul><li><a href="contact.html">Become a Stockist</a></li><li><a href="contact.html">Distributor Enquiry</a></li><li><a href="suppliers.html">Factory Submissions</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">About</a></li><li><a href="sourcing.html">Sourcing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Lumin Lace. All rights reserved. Registered in Hong Kong.</span><span>Privacy Policy · Terms of Trade</span></div>
+</footer>
+
+</body>
+</html>

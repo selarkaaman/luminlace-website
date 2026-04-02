@@ -5,308 +5,185 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lumin Lace — Professional Hair Tools | Trade & Wholesale</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+.hero { position: relative; height: 600px; overflow: hidden; display: flex; align-items: flex-end; }
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #c8507a 0%, #e87aaa 30%, #f4b8cc 55%, #e87aaa 70%, #c8507a 100%); }
+.bubble { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.12); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(14,14,14,0.88) 0%, rgba(14,14,14,0.45) 55%, transparent 100%); }
+.hero-content-wrap { position: relative; z-index: 2; padding: 0 64px 64px; }
+.hero-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(48px, 7vw, 76px); font-weight: 800; text-transform: uppercase; line-height: 0.92; color: #fff; margin-bottom: 20px; }
+.hero-sub { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 36px; font-weight: 300; max-width: 460px; line-height: 1.75; }
+.hero-btns { display: flex; gap: 12px; }
+.hero-stats { display: flex; gap: 48px; margin-top: 52px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.12); }
+.hstat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; color: var(--pink); display: block; }
+.hstat-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+
+.home-about { display: grid; grid-template-columns: 1fr 1fr; min-height: 440px; }
+.home-about-img { background: linear-gradient(135deg, #f8c8d8 0%, #f4a0c0 40%, #e8789a 100%); display: flex; align-items: center; justify-content: center; }
+.home-about-text { background: var(--dark); padding: 72px 64px; display: flex; flex-direction: column; justify-content: center; }
+.home-about-text h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 40px; font-weight: 800; text-transform: uppercase; line-height: 1.0; margin-bottom: 18px; }
+.home-about-text p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 16px; font-weight: 300; max-width: 400px; }
+.home-about-text .links { display: flex; gap: 20px; margin-top: 28px; flex-wrap: wrap; }
+.home-about-text .links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.3); padding-bottom: 2px; }
+.home-about-text .links a:hover { border-color: var(--gold); }
+
+.home-products { background: var(--dark); padding: 64px 48px; }
+.section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 36px; }
+.section-header h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; text-transform: uppercase; }
+.prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.prod-card { background: var(--black); cursor: pointer; }
+.prod-img-wrap { height: 240px; display: flex; align-items: center; justify-content: center; }
+.prod-bg-peach { background: linear-gradient(160deg, #f4c8a8, #e8a880); }
+.prod-bg-mint { background: linear-gradient(160deg, #a8d8c8, #70bca8); }
+.prod-bg-pink { background: linear-gradient(160deg, #f4a8b8, #e87898); }
+.prod-info { padding: 18px 20px 22px; background: var(--dark); }
+.prod-cat { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 700; }
+.prod-name { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800; text-transform: uppercase; margin-bottom: 6px; }
+.prod-meta { font-size: 11px; color: var(--grey); }
+
+.home-cta { background: var(--pink); padding: 72px 48px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.home-cta h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 800; text-transform: uppercase; line-height: 0.95; }
+.home-cta p { font-size: 14px; color: rgba(255,255,255,0.8); margin-top: 12px; font-weight: 300; max-width: 480px; }
+.home-cta .cta-btns { display: flex; gap: 12px; flex-direction: column; align-items: flex-end; }
+.btn-white-on-pink { background: #fff; color: var(--pink); padding: 14px 32px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+.btn-outline-on-pink { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); padding: 12px 32px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+</style>
 </head>
 <body>
 
-<!-- ANNOUNCE -->
-<div class="announce">
-  Hong Kong based · Supplying retailers across 12 markets · Trade enquiries welcome
-</div>
+<div class="announce">Hong Kong based &nbsp;·&nbsp; Supplying retailers across 12 markets &nbsp;·&nbsp; Trade enquiries welcome</div>
 
-<!-- NAV -->
 <nav>
-  <div class="logo">
-    <img src="assets/logo.png" alt="Lumin Lace" class="logo-img">
-  </div>
+  <a href="index.html"><img src="assets/logo.png" alt="Lumin Lace" class="logo-img"></a>
   <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
-    <li><a href="#sourcing">Sourcing Capability</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#suppliers">For Suppliers</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="sourcing.html">Sourcing</a></li>
+    <li><a href="suppliers.html">For Suppliers</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-cta">
-    <a href="#contact" class="btn-nav">Request Catalogue</a>
-  </div>
+  <a href="contact.html" class="btn-nav">Request Catalogue</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section class="hero">
   <div class="hero-bg">
-    <div class="bubble" style="width:320px;height:320px;top:-60px;left:-80px;"></div>
-    <div class="bubble" style="width:200px;height:200px;top:40px;right:60px;"></div>
-    <div class="bubble" style="width:260px;height:260px;bottom:-80px;right:-40px;background:rgba(255,255,255,0.08);"></div>
-    <svg width="120" height="300" viewBox="0 0 120 300" fill="none" style="opacity:0.85;position:relative;z-index:1;">
-      <rect x="44" y="0" width="32" height="220" rx="16" fill="#1a1a1a"/>
-      <rect x="40" y="200" width="40" height="80" rx="6" fill="#111"/>
-      <rect x="48" y="212" width="24" height="8" rx="3" fill="#e87aaa" opacity="0.7"/>
-      <rect x="48" y="228" width="16" height="8" rx="3" fill="#e87aaa" opacity="0.35"/>
-      <circle cx="60" cy="28" r="9" fill="none" stroke="#fff" stroke-width="1.5"/>
-    </svg>
+    <div class="bubble" style="width:340px;height:340px;top:-80px;right:80px;"></div>
+    <div class="bubble" style="width:200px;height:200px;top:60px;right:320px;background:rgba(255,255,255,0.08);"></div>
+    <div class="bubble" style="width:160px;height:160px;bottom:40px;right:160px;background:rgba(255,255,255,0.1);"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content-wrap">
-    <div class="hero-content">
-      <div class="hero-eyebrow">Women's Professional Hair Tools</div>
-      <h1 class="hero-title">Built for retail.<br>Sourced from the best.</h1>
-      <p class="hero-sub">Lumin Lace supplies premium hair tools to retailers, distributors and salon chains. Hong Kong based. Multi-factory sourcing. Consistent quality across every SKU.</p>
-      <div class="hero-btns">
-        <a href="#products" class="btn-white">View Products</a>
-        <a href="#contact" class="btn-white-outline">Trade Enquiry</a>
-      </div>
+    <span class="eyebrow">Women's Professional Hair Tools</span>
+    <h1 class="hero-title">Built for retail.<br>Sourced from<br>the best.</h1>
+    <p class="hero-sub">Lumin Lace supplies premium hair tools to retailers, distributors and salon chains. Hong Kong based. Multi-factory sourcing. Consistent quality across every SKU.</p>
+    <div class="hero-btns">
+      <a href="products.html" class="btn-white">View Products</a>
+      <a href="contact.html" class="btn-outline">Trade Enquiry</a>
     </div>
-    <div class="carousel-dots" style="margin-top:28px;">
-      <div class="dot active"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+    <div class="hero-stats">
+      <div><span class="hstat-num">12</span><span class="hstat-label">Markets Supplied</span></div>
+      <div><span class="hstat-num">8+</span><span class="hstat-label">Factory Partners</span></div>
+      <div><span class="hstat-num">15+</span><span class="hstat-label">Years in HK Trade</span></div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
+<!-- TRUST -->
 <div class="trust">
-  <h2>Why partner with Lumin Lace</h2>
+  <div class="trust-label">Why partner with Lumin Lace</div>
   <div class="trust-grid">
     <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-6 9 6v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="20" height="20"><path d="M3 9l9-6 9 6v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       <div><strong>Hong Kong HQ</strong><span>Direct access to Pearl River Delta factories</span></div>
     </div>
     <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-      <div><strong>12 Markets Supplied</strong><span>Retail partners across Asia, Europe &amp; Middle East</span></div>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      <div><strong>12 Markets Supplied</strong><span>Asia, Europe &amp; Middle East retail partners</span></div>
     </div>
     <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <div><strong>Multi-Factory Sourcing</strong><span>Complete product sets from coordinated supply chains</span></div>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div><strong>Multi-Factory Sourcing</strong><span>Complete sets from coordinated supply chains</span></div>
     </div>
     <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" width="20" height="20"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       <div><strong>QC at Origin</strong><span>In-house inspection before every shipment</span></div>
     </div>
   </div>
 </div>
 
-<!-- PRODUCTS -->
-<section class="products-section" id="products">
+<!-- PRODUCT PREVIEW -->
+<section class="home-products">
   <div class="section-header">
     <div>
-      <div class="section-eyebrow">Product Catalogue</div>
-      <h2 class="section-title">Our Range</h2>
+      <span class="eyebrow">Product Catalogue</span>
+      <h2>Featured Range</h2>
     </div>
-    <a href="#contact" class="btn-white-outline">Request Full Catalogue</a>
+    <a href="products.html" class="btn-outline">Full Catalogue</a>
   </div>
-
-  <div class="product-carousel">
+  <div class="prod-grid">
     <div class="prod-card">
       <div class="prod-img-wrap prod-bg-peach">
-        <svg width="50" height="200" viewBox="0 0 50 200" fill="none">
-          <rect x="17" y="0" width="16" height="160" rx="8" fill="#c86040"/>
-          <rect x="15" y="148" width="20" height="40" rx="4" fill="#b05030"/>
-          <rect x="18" y="156" width="14" height="5" rx="2" fill="#fff" opacity="0.4"/>
-        </svg>
+        <svg width="46" height="190" viewBox="0 0 46 190" fill="none"><rect x="15" y="0" width="16" height="150" rx="8" fill="#c86040"/><rect x="13" y="138" width="20" height="40" rx="4" fill="#b05030"/><rect x="16" y="147" width="14" height="5" rx="2" fill="#fff" opacity="0.4"/></svg>
       </div>
       <div class="prod-info">
-        <div class="prod-includes">Complete set · Includes matching bag</div>
-        <div class="prod-name">Lumière Straightener — Velvet Collection</div>
-        <div class="prod-meta">MOQ: 50 units &nbsp;·&nbsp; RRP: £309</div>
+        <div class="prod-cat">Straightener · Complete Set</div>
+        <div class="prod-name">Lumière — Sun-Kissed Peach</div>
+        <div class="prod-meta">MOQ 50 units &nbsp;·&nbsp; RRP £309</div>
       </div>
     </div>
     <div class="prod-card">
       <div class="prod-img-wrap prod-bg-mint">
-        <svg width="50" height="200" viewBox="0 0 50 200" fill="none">
-          <rect x="17" y="0" width="16" height="160" rx="8" fill="#3a8a70"/>
-          <rect x="15" y="148" width="20" height="40" rx="4" fill="#2a7060"/>
-          <rect x="18" y="156" width="14" height="5" rx="2" fill="#fff" opacity="0.4"/>
-        </svg>
+        <svg width="46" height="190" viewBox="0 0 46 190" fill="none"><rect x="15" y="0" width="16" height="150" rx="8" fill="#3a8a70"/><rect x="13" y="138" width="20" height="40" rx="4" fill="#2a7060"/><rect x="16" y="147" width="14" height="5" rx="2" fill="#fff" opacity="0.4"/></svg>
       </div>
       <div class="prod-info">
-        <div class="prod-includes">Complete set · Includes matching bag</div>
-        <div class="prod-name">Lumière Max Straightener — Jelly Mint</div>
-        <div class="prod-meta">MOQ: 50 units &nbsp;·&nbsp; RRP: £309</div>
+        <div class="prod-cat">Straightener · Complete Set</div>
+        <div class="prod-name">Lumière Max — Jelly Mint</div>
+        <div class="prod-meta">MOQ 50 units &nbsp;·&nbsp; RRP £309</div>
       </div>
     </div>
     <div class="prod-card">
       <div class="prod-img-wrap prod-bg-pink">
-        <svg width="70" height="200" viewBox="0 0 70 200" fill="none">
-          <rect x="27" y="0" width="16" height="100" rx="8" fill="#c84070"/>
-          <ellipse cx="35" cy="108" rx="22" ry="16" fill="#b03060"/>
-          <rect x="27" y="118" width="16" height="70" rx="8" fill="#c84070"/>
-        </svg>
+        <svg width="60" height="190" viewBox="0 0 60 190" fill="none"><rect x="22" y="0" width="16" height="95" rx="8" fill="#c84070"/><ellipse cx="30" cy="103" rx="22" ry="15" fill="#b03060"/><rect x="22" y="112" width="16" height="66" rx="8" fill="#c84070"/></svg>
       </div>
       <div class="prod-info">
-        <div class="prod-includes">Complete set · Includes matching bag</div>
-        <div class="prod-name">Aero Blowdry Brush — Sun-Kissed Peach</div>
-        <div class="prod-meta">MOQ: 30 units &nbsp;·&nbsp; RRP: £389</div>
+        <div class="prod-cat">Blowdry Brush · Complete Set</div>
+        <div class="prod-name">Aero Brush — Sun-Kissed Peach</div>
+        <div class="prod-meta">MOQ 30 units &nbsp;·&nbsp; RRP £389</div>
       </div>
     </div>
-  </div>
-  <div class="carousel-dots-dark">
-    <div class="dot-dark active"></div>
-    <div class="dot-dark"></div>
-    <div class="dot-dark"></div>
-    <div class="dot-dark"></div>
-    <div class="dot-dark"></div>
   </div>
 </section>
 
-<!-- SOURCING CAPABILITY -->
-<section class="sourcing" id="sourcing">
-  <div class="sourcing-text">
-    <div class="section-eyebrow">Sourcing Capability</div>
-    <h2>One order.<br>Multiple factories.</h2>
-    <p>Our multi-factory model means retailers receive complete, coordinated product sets — tools, accessories and packaging — sourced from specialist manufacturers and consolidated under one roof. No split shipments. No mismatched quality.</p>
-    <div class="sourcing-stats">
-      <div class="stat">
-        <span class="stat-num">8+</span>
-        <span class="stat-label">Factory Partners</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">15+</span>
-        <span class="stat-label">Years in HK Trade</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">100%</span>
-        <span class="stat-label">QC at Origin</span>
-      </div>
-    </div>
-    <a href="#contact" class="btn-white-outline">Discuss Your Requirements</a>
+<!-- ABOUT SPLIT -->
+<div class="home-about">
+  <div class="home-about-img">
+    <svg width="160" height="320" viewBox="0 0 160 320" fill="none"><rect x="68" y="0" width="24" height="260" rx="12" fill="#c84070"/><rect x="64" y="250" width="32" height="52" rx="6" fill="#a03058"/><rect x="70" y="262" width="20" height="6" rx="2" fill="#fff" opacity="0.3"/></svg>
   </div>
-  <div class="sourcing-img">
-    <div class="sourcing-badge">
-      <span class="badge-top">Complete sets</span>
-      <span class="badge-mid">Multi-factory</span>
-      <span class="badge-sub">consolidated shipping</span>
-    </div>
-    <svg width="280" height="200" viewBox="0 0 280 200" fill="none" style="position:relative;z-index:1;">
-      <rect x="20" y="70" width="80" height="16" rx="3" fill="#e87aaa" opacity="0.9"/>
-      <rect x="20" y="92" width="80" height="16" rx="3" fill="#7dd4b8" opacity="0.9"/>
-      <rect x="60" y="55" width="16" height="110" rx="8" fill="#e87aaa" opacity="0.85"/>
-      <rect x="110" y="40" width="16" height="130" rx="8" fill="#7dd4b8" opacity="0.85"/>
-      <rect x="155" y="70" width="80" height="16" rx="3" fill="#f4a8b8" opacity="0.9"/>
-      <rect x="155" y="92" width="80" height="16" rx="3" fill="#f4c8a8" opacity="0.9"/>
-      <rect x="190" y="55" width="16" height="110" rx="8" fill="#f4a8b8" opacity="0.8"/>
-    </svg>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-img">
-    <svg width="180" height="340" viewBox="0 0 180 340" fill="none">
-      <rect x="78" y="0" width="24" height="280" rx="12" fill="#c84070"/>
-      <rect x="74" y="270" width="32" height="56" rx="6" fill="#a03058"/>
-      <rect x="80" y="282" width="20" height="6" rx="2" fill="#fff" opacity="0.3"/>
-      <rect x="80" y="296" width="14" height="6" rx="2" fill="#fff" opacity="0.15"/>
-    </svg>
-  </div>
-  <div class="about-text">
-    <div class="section-eyebrow">About Lumin Lace</div>
+  <div class="home-about-text">
+    <span class="eyebrow">About Lumin Lace</span>
     <h2>A Hong Kong brand built on supply chain depth.</h2>
-    <p>Lumin Lace was founded by trading professionals with deep roots in the Pearl River Delta manufacturing ecosystem. We build brands that can actually be delivered — on time, on spec, at scale.</p>
-    <p>Our team manages everything from factory qualification and tooling to packaging development and logistics. We don't just design products — we engineer supply chains around them.</p>
-    <div class="about-tags">
-      <span class="tag">Hair Straighteners</span>
-      <span class="tag">Dryers &amp; Diffusers</span>
-      <span class="tag">Curl Wands</span>
-      <span class="tag">Hot Brushes</span>
-      <span class="tag">Accessories</span>
-      <span class="tag">Gift Sets</span>
+    <p>Founded by trading professionals with deep roots in the Pearl River Delta. We manage everything from factory qualification and tooling to packaging and logistics.</p>
+    <p>We don't just design products — we engineer supply chains around them.</p>
+    <div class="links">
+      <a href="sourcing.html">Sourcing Capability →</a>
+      <a href="suppliers.html">For Suppliers →</a>
+      <a href="contact.html">Get in Touch →</a>
     </div>
   </div>
-</section>
+</div>
 
-<!-- FOR SUPPLIERS -->
-<section class="suppliers-section" id="suppliers">
-  <div class="suppliers-inner">
-    <div class="section-eyebrow" style="text-align:center;">For Factories &amp; Suppliers</div>
-    <h2 style="text-align:center;">Looking to supply Lumin Lace?</h2>
-    <p style="text-align:center;max-width:560px;margin:0 auto 40px;color:rgba(255,255,255,0.6);font-size:14px;line-height:1.8;">We are always evaluating new factory partners for our growing product range. If you manufacture hair tools, accessories or packaging components and meet our quality standards, we'd like to hear from you.</p>
-    <div class="suppliers-grid">
-      <div class="supplier-card">
-        <div class="supplier-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M9 12l2 2 4-4M12 3a9 9 0 100 18A9 9 0 0012 3z"/></svg>
-        </div>
-        <strong>What we source</strong>
-        <span>Ionic hair dryers, ceramic straighteners, curl wands, hot brushes, travel accessories, gift packaging</span>
-      </div>
-      <div class="supplier-card">
-        <div class="supplier-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-        </div>
-        <strong>Our standards</strong>
-        <span>CE / RoHS certified, BSCI or equivalent audit, capacity for 500+ unit runs with consistent output</span>
-      </div>
-      <div class="supplier-card">
-        <div class="supplier-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-        </div>
-        <strong>How to connect</strong>
-        <span>Submit your company profile, product range and certifications via the contact form below</span>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="#contact" class="btn-white">Submit Factory Profile</a>
-    </div>
+<!-- CTA BANNER -->
+<div class="home-cta">
+  <div>
+    <h2>Ready to stock Lumin Lace?</h2>
+    <p>We work with retailers, distributors and buying agents across 12 markets. Request our trade catalogue or start a conversation.</p>
   </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="contact-inner">
-    <div class="contact-left">
-      <div class="section-eyebrow">Get in Touch</div>
-      <h2>Trade enquiries &amp; sourcing discussions</h2>
-      <p>Whether you're a retailer looking to carry Lumin Lace, a distributor seeking exclusive rights in your market, or a factory that wants to supply us — reach out and we'll respond within 2 business days.</p>
-      <div class="contact-details">
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M3 9l9-6 9 6v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-          <span>Hong Kong SAR</span>
-        </div>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>trade@luminlace.com</span>
-        </div>
-      </div>
-    </div>
-    <div class="contact-right">
-      <form class="contact-form" onsubmit="return false;">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Name</label>
-            <input type="text" placeholder="Your name">
-          </div>
-          <div class="form-group">
-            <label>Company</label>
-            <input type="text" placeholder="Company name">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Country</label>
-            <input type="text" placeholder="Country">
-          </div>
-          <div class="form-group">
-            <label>Enquiry Type</label>
-            <select>
-              <option value="">Select type</option>
-              <option>Retailer / Buyer</option>
-              <option>Distributor</option>
-              <option>Factory / Supplier</option>
-              <option>Press / Media</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea placeholder="Tell us about your business and what you're looking for..." rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Enquiry</button>
-      </form>
-    </div>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-white-on-pink">Request Catalogue</a>
+    <a href="contact.html" class="btn-outline-on-pink">Trade Enquiry</a>
   </div>
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -315,34 +192,9 @@
       <img src="assets/logo.png" alt="Lumin Lace" class="footer-logo-img">
       <div class="footer-tagline">Professional hair tools. Hong Kong sourced. Retail ready.</div>
     </div>
-    <div class="footer-col">
-      <h4>Products</h4>
-      <ul>
-        <li>Straighteners</li>
-        <li>Hair Dryers</li>
-        <li>Curl Wands</li>
-        <li>Hot Brushes</li>
-        <li>Accessories</li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Trade</h4>
-      <ul>
-        <li>Become a Stockist</li>
-        <li>Distributor Enquiry</li>
-        <li>Factory Submissions</li>
-        <li>Download Catalogue</li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li>About Us</li>
-        <li>Sourcing Capability</li>
-        <li>Quality Standards</li>
-        <li>Contact</li>
-      </ul>
-    </div>
+    <div class="footer-col"><h4>Products</h4><ul><li><a href="products.html">Straighteners</a></li><li><a href="products.html">Hair Dryers</a></li><li><a href="products.html">Curl Wands</a></li><li><a href="products.html">Hot Brushes</a></li><li><a href="products.html">Accessories</a></li></ul></div>
+    <div class="footer-col"><h4>Trade</h4><ul><li><a href="contact.html">Become a Stockist</a></li><li><a href="contact.html">Distributor Enquiry</a></li><li><a href="suppliers.html">Factory Submissions</a></li><li><a href="contact.html">Download Catalogue</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">About Us</a></li><li><a href="sourcing.html">Sourcing Capability</a></li><li><a href="suppliers.html">For Suppliers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Lumin Lace. All rights reserved. Registered in Hong Kong.</span>
